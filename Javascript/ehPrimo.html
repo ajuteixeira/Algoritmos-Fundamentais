@@ -1,0 +1,13 @@
+<script>
+  // Verificar se um número é primo
+  let n = parseInt(prompt("Digite um número para verificar se é primo:"));
+  let primo = true;
+  if (n < 2) primo = false;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      primo = false;
+      break;
+    }
+  }
+  document.write(`O número ${n} é primo? ${primo}<br>`);
+</script>
