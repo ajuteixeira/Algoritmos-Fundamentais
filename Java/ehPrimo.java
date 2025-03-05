@@ -1,16 +1,24 @@
+import java.util.Scanner;
+
 public class ehPrimo {
-    public void verificarPrimo(int n) {
-        boolean primo;
-
-        // Considera que números menores que 2 não são primos
-        if (n < 2) {
-            primo = false;
+    
+    // Método para verificar se o número é primo e exibir o resultado
+    public void verificarPrimo() {
+        // Cria o scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita ao usuário para digitar um número
+        System.out.print("Digite um número para verificar se é primo: ");
+        int n = scanner.nextInt();
+        
+        // Verifica se o número é primo
+        if (n < 2 || n % 2 == 0) {
+            System.out.println("O número " + n + " não é primo.");
         } else {
-            // Verifica se o número é divisível por 2
-            primo = n % 2 != 0;
+            System.out.println("O número " + n + " é primo.");
         }
-
-        // Exibe o resultado no console
-        System.out.println("O número " + n + " é primo? " + primo);
+        
+        // Fecha o scanner
+        scanner.close();
     }
 }
