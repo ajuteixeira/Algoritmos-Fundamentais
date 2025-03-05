@@ -1,0 +1,13 @@
+<script>
+  // Fibonacci
+  let numFibonacci = parseInt(prompt("Digite a quantidade de termos da sequência de Fibonacci:"));
+  let a = 0, b = 1, aux;
+  let resultado = [a, b];
+  for (let i = 2; i < numFibonacci; i++) {
+    aux = a + b;
+    resultado.push(aux);
+    a = b;
+    b = aux;
+  }
+  document.write(`Os primeiros ${numFibonacci} termos da sequência de Fibonacci são: ${resultado.join(', ')}<br>`);
+</script>
