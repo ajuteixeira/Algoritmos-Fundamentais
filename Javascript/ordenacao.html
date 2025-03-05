@@ -1,0 +1,6 @@
+<script>
+  // Ordenação - Quicksort
+  let arrayOrdenar = prompt("Digite uma lista de números separados por vírgula para ordenar:").split(',').map(Number);
+  arrayOrdenar.sort((a, b) => a - b);
+  document.write(`Array ordenado: ${arrayOrdenar.join(', ')}<br>`);
+</script>
