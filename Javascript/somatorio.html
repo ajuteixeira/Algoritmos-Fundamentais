@@ -1,0 +1,6 @@
+<script>
+  // Somatório
+  let numeros = prompt("Digite uma lista de números separados por vírgula:").split(',').map(Number);
+  let soma = numeros.reduce((acc, val) => acc + val, 0);
+  document.write(`O somatório dos números é: ${soma}<br>`);
+</script>
